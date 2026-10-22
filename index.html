@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed-variant":"#004c69","secondary-fixed-dim":"#7bd0ff","surface-tint":"#47d6ff","outline":"#9ca3af","background":"#f5f5f7","primary":"#0369a1","secondary-fixed":"#c4e7ff","on-tertiary-fixed":"#001f26","on-surface":"#111827","secondary-container":"#00a6e0","error":"#ffb4ab","inverse-surface":"#1f2937","tertiary-container":"#44d1f0","on-surface-variant":"#4b5563","primary-container":"#00d2ff","tertiary-fixed":"#acedff","surface-bright":"#ffffff","outline-variant":"#d1d5db","on-primary":"#111827","surface-container-high":"#ffffff","secondary":"#075985","surface-container-highest":"#e5e7eb","tertiary":"#0e7490","on-primary-fixed-variant":"#004e60","on-primary-fixed":"#001f28","on-error":"#690005","inverse-primary":"#00677f","surface-variant":"#e5e7eb","surface-container-lowest":"#ffffff","surface-container-low":"#f9fafb","on-tertiary-container":"#005766","on-tertiary":"#003640","surface-dim":"#e5e7eb","surface-container":"#ffffff","on-error-container":"#ffdad6","tertiary-fixed-dim":"#4cd7f6","on-background":"#111827","primary-fixed-dim":"#47d6ff","surface":"#f5f5f7","on-secondary-fixed":"#001e2c","on-secondary-container":"#00374d","on-secondary":"#00354a","primary-fixed":"#b6ebff","on-primary-container":"#003543","error-container":"#93000a","on-tertiary-fixed-variant":"#004e5c","inverse-on-surface":"#f9fafb","border-glass":"rgba(56, 189, 248, 0.16)","border-glass-active":"rgba(0, 210, 255, 0.55)"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"4rem","space-md":"1rem","space-xl":"2.5rem","margin-tablet":"2.5rem","gutter":"1.5rem","margin":"1.25rem","gutter-desktop":"2rem","space-2xl":"4rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","space-3xl":"6rem"},"fontFamily":{"headline-lg":["Playfair Display"],"display-hero":["Playfair Display"],"label-caps":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"title-lg":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero":["64px",{"lineHeight":"76px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.14em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"500"}],"headline-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"500"}],"display-hero-mobile":["38px",{"lineHeight":"46px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}]}}}};</script><style>
+/* Light theme override: requested #f5f5f7 page background */
+html, body { background: #f5f5f7 !important; color: #111827; }
+body { color-scheme: light; }
+header { background-color: rgba(245,245,247,.92) !important; border-color: #e5e7eb !important; box-shadow: 0 4px 24px rgba(15,23,42,.08) !important; }
+main, main > div { background-color: #f5f5f7 !important; color: #111827; }
+section { color: #111827; }
+[class*="bg-[#070d18]"] { background-color: rgba(245,245,247,.92) !important; }
+[class*="text-on-surface"] { color: #111827 !important; }
+[class*="text-on-background"] { color: #111827 !important; }
+[class*="text-on-surface-variant"] { color: #4b5563 !important; }
+[class*="shadow-[0_20px_50px_rgba(0,0,0,0.8)]"],
+[class*="shadow-[0_25px_60px_rgba(0,0,0,0.8)]"] { box-shadow: 0 18px 45px rgba(15,23,42,.12) !important; }
+</style></head><body class="bg-background font-body-md text-on-surface selection:bg-cyan-500/30 selection:text-sky-800"><header class="fixed top-0 w-full z-50 bg-[#f5f5f7]/90 backdrop-blur-xl border-b border-slate-200 shadow-[0_4px_24px_rgba(15,23,42,0.08)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3 shrink-0"><img alt="MC Hoang Anh Logo" class="h-8 w-auto object-contain drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy167l5DFCXeO-xFz2BKqZc5anern2SeGcHyzfqOan8g0kyQyX1vxfiLOra3bcDDBbPWIUgdMGcnLNXp_GT7H2onIvGqWCecGjCgdJAde9dqj4HihTQT9ZR9W9Pmj8ZikpZrOQmKQ-oIkq4aZ4PuNggekW7i3SlHsybciklYZHpVrrbSTf6AsrHXpeNc8ozTkLpfi0JTDIJFluauXKImtSpwEnwl1N1GZ9dVn30NgbpNwF-UM8stO7PQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Hoàng Anh</span><span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase mt-0.5">Bilingual Host</span></div></div><nav class="hidden xl:flex items-center gap-6 lg:gap-8" data-active-classes="text-sky-800 font-title-md"><a class="font-title-md text-title-md text-slate-700 hover:text-blue-900 transition-colors duration-200" data-path="gioi-thieu" href="#gioi-thieu">Giới thiệu</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-sky-800 transition-colors duration-200" data-path="the-loai" href="#the-loai">Thể loại</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-sky-800 transition-colors duration-200" data-path="video-demo" href="#video-demo">Video Demo</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-sky-800 transition-colors duration-200" data-path="du-an" href="#du-an">Dự án</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-sky-800 transition-colors duration-200" data-path="danh-gia" href="#danh-gia">Đánh giá</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-sky-800 transition-colors duration-200" data-path="bao-gia" href="#bao-gia">Báo giá</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-sky-800 transition-colors duration-200" data-path="lien-he" href="#lien-he">Liên hệ</a></nav><div class="flex items-center gap-4 shrink-0"><a class="hidden sm:inline-flex items-center justify-center bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 font-title-md text-title-md font-bold px-5 py-2.5 rounded-lg shadow-[0_0_22px_rgba(0,210,255,0.45)] hover:shadow-[0_0_32px_rgba(56,189,248,0.75)] hover:from-cyan-300 hover:to-sky-400 transition-all duration-300" data-path="lien-he-booking" href="#booking">Liên hệ Booking</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-cyan-400/50 shadow-[0_0_12px_rgba(56,189,248,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcvTlmnTQqguQmkOfjJpTp4N-WizUCeKhnUsnhZvoNv5n83l4t2f4M_fG84tvro15DMT1jz_MqHGbwVmWqXk72gOcEpbDFQ45rTZnrV1849UPmT4_nbrgcvvoaZRcNBPZteA_gkYlTHoTgTldPgF37f7uCmLPn-j_UWOqEV9AURp_U0bQiL7uMXa5yGEJy8dQ22-Ld3W3PT6F3GVPajdHYQugRE-42KvKbS47TcgVZF_vCgZXGgT_qag"/></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. HERO SECTION -->
+<section class="relative min-h-[942px] flex items-center justify-center overflow-hidden -mt-20 pt-28 pb-16 px-6 lg:px-12 bg-surface">
+<!-- Atmospheric Stage & Neon Cyan Glows -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[720px] rounded-full bg-cyan-500/15 blur-[140px] pointer-events-none"></div>
+<div class="absolute top-1/3 -right-40 w-[460px] h-[460px] rounded-full bg-sky-500/15 blur-[130px] pointer-events-none"></div>
+<div class="absolute top-1/2 -left-32 w-[380px] h-[380px] rounded-full bg-cyan-400/10 blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-surface via-surface/80 to-transparent pointer-events-none"></div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
+<!-- Left Column: Typographic & Bio Hook -->
+<div class="lg:col-span-7 flex flex-col items-start gap-6">
+<!-- Badges Pill Row -->
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-sky-200 text-sky-800 font-label-caps text-label-caps tracking-widest uppercase shadow-[0_0_12px_rgba(6,182,212,0.2)]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">translate</span>
+            Bilingual MC (IELTS 8.0)
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/90 border border-slate-200 text-sky-800 font-label-caps text-label-caps tracking-wider uppercase">
+<span class="material-symbols-outlined text-[15px] text-sky-800">public</span>
+            Toàn Quốc &amp; Quốc Tế
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/90 border border-slate-200 text-sky-800 font-label-caps text-label-caps tracking-wider uppercase">
+<span class="material-symbols-outlined text-[15px] text-sky-800">mic</span>
+            Giọng Truyền Thanh Trầm Ấm
+          </span>
+</div>
+<!-- Headline & Slogan -->
+<div class="flex flex-col gap-3">
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight uppercase">
+            MC Hoàng Anh
+          </h1>
+<p class="font-headline-md text-headline-md text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-300 to-cyan-400 font-medium tracking-normal">
+            MC Sự Kiện Song Ngữ Việt – Anh
+            <span class="block text-title-lg font-body-lg text-slate-600 font-normal mt-1">
+              Chuyên Nghiệp • Tinh Tế • Truyền Cảm Hứng
+            </span>
+</p>
+</div>
+<!-- Tagline Paragraph -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+          Gương mặt bảo chứng thành công cho hơn <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-400 font-semibold drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]">500+ hội nghị cấp cao</span>, diễn đàn kinh tế đa phương, gala dinner thượng đỉnh và những tiệc cưới phong cách hoàng gia xúc động nhất.
+        </p>
+<!-- CTA Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 font-title-md text-title-md font-bold px-8 py-3.5 rounded-lg shadow-[0_0_26px_rgba(0,210,255,0.45)] hover:shadow-[0_0_38px_rgba(56,189,248,0.75)] hover:from-cyan-300 hover:to-sky-400 transition-all duration-300" href="#booking">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+            Đặt Lịch Ngay
+          </a>
+<a class="inline-flex items-center justify-center gap-2 bg-surface-container-high/90 hover:bg-surface-bright text-on-surface border border-sky-200 hover:border-cyan-400/70 font-title-md text-title-md px-7 py-3.5 rounded-lg transition-all duration-300 group hover:shadow-[0_0_20px_rgba(56,189,248,0.25)]" href="#video-demo">
+<span class="w-7 h-7 rounded-full bg-cyan-400/20 border border-sky-200 flex items-center justify-center text-sky-800 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+            Xem Video Demo
+          </a>
+</div>
+<!-- Micro Social Proof Bar -->
+<div class="flex items-center gap-6 pt-4 text-sky-800 font-body-sm text-body-sm">
+<div class="flex items-center -space-x-2">
+<div class="w-8 h-8 rounded-full bg-surface-bright border border-sky-200 flex items-center justify-center text-sky-800 font-bold text-xs shadow-[0_0_8px_rgba(56,189,248,0.2)]">A</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-sky-200 flex items-center justify-center text-sky-800 font-bold text-xs shadow-[0_0_8px_rgba(56,189,248,0.2)]">V</div>
+<div class="w-8 h-8 rounded-full bg-surface-container border border-sky-200 flex items-center justify-center text-sky-800 font-bold text-xs shadow-[0_0_8px_rgba(56,189,248,0.2)]">M</div>
+</div>
+<div>
+<span class="text-on-surface font-semibold">50+ Tập Đoàn Đa Quốc Gia</span> tín nhiệm hợp tác thường niên
+          </div>
+</div>
+</div>
+<!-- Right Column: MC Portrait Showcase Frame -->
+<div class="lg:col-span-5 relative flex justify-center">
+<!-- Backdrop ambient rim -->
+<div class="absolute inset-0 max-w-md mx-auto rounded-3xl bg-gradient-to-tr from-cyan-500/25 via-sky-500/10 to-transparent blur-xl"></div>
+<div class="relative w-full max-w-md rounded-2xl overflow-hidden bg-surface-container border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(56,189,248,0.15)] group">
+<img class="w-full h-[540px] object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Handsome charismatic Vietnamese male bilingual event MC in bespoke midnight navy tuxedo on a grand stage holding a sleek vintage Shure microphone, radiant warm golden spotlights creating soft bokeh in the background, sharp facial features, confident charismatic smile, editorial photography luxury event atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUwWjXYE3hbBXDHwKDlKfZ1yAtBpfF1kqu3ywsZlhWZ8WHC36stz8n4NAKmXiQPVomlM33lLgrhQ09aSyxvUTAhFZo3o7EQc6Z3BnJDJxzVi3I-E4rBQ0Rb6j-ZUzfi8Tg1H-Unj4yFCwqOQrAIpN2R74l5kGQ3yZUy73NYCuFrwgCBr5iLiJVYSiefTQw2NNYd76EsKcbEEdNnvh8UdjdXkVLTToiYGZjO1zMN1YF91ACs0DNEJoeyw"/>
+<!-- Image bottom gradient overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-90"></div>
+<!-- Bottom floating badge -->
+<div class="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-surface-container-high/90 backdrop-blur-md border border-slate-200 flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-sky-800 leading-tight">Hoàng Anh</span>
+<span class="font-label-caps text-label-caps text-slate-600 uppercase tracking-widest">Master of Ceremonies</span>
+</div>
+<div class="flex items-center gap-1 text-sky-800 drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. GIỚI THIỆU BẢN THÂN (ABOUT) + METRICS -->
+<section class="py-space-3xl px-6 lg:px-12 bg-surface-container-lowest relative" id="gioi-thieu">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase">Giới thiệu bản thân</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Phong Thái Điềm Đạm • Ứng Biến Sân Khấu Sắc Bén</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Kết hợp hoàn hảo giữa kiến thức ngoại giao, bản lĩnh sân khấu truyền hình và nghệ thuật làm chủ cảm xúc khán phòng.</p>
+</div>
+<!-- Split Layout: Story & Secondary Candid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left: Stage Interaction Candid -->
+<div class="lg:col-span-5 relative">
+<div class="rounded-2xl overflow-hidden bg-surface-container border border-slate-200 shadow-2xl relative shadow-[0_0_30px_rgba(56,189,248,0.12)]">
+<img class="w-full h-[460px] object-cover" data-alt="Professional bilingual MC in action, gesturing naturally while delivering an inspiring keynote presentation on an illuminated high-tech conference stage in front of hundreds of attendees, elegant corporate dark blue aesthetic with warm golden stage wash, high dynamic range." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Vq4rLrtkJ7qefNeErnfPZnBo_PPeGMX9HmJJ03cbo8Lc5O7c-dEvL2EgGZed955UUGLA9IlV2WxA-ro2dBbAhkLUW2wbKWbKfyfZ1Hr67BeAaC7l-WHnky5hAXLGv2uRjccDCQgVbJYmoYM-dJArJ9mWyz4vE9g5mhlCBW53cHZWl4-qNg1p2neGZ0WeJomNw5l1o9ivLmHUh4-zZ94N50NW1Ci_yjDeDyLKqUWJTk9NQ4lLsYO-9Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-surface/80 backdrop-blur-md border border-slate-200">
+<p class="font-body-sm text-body-sm text-slate-600 italic leading-relaxed">
+                "Một người dẫn chương trình đẳng cấp không chỉ truyền đạt thông điệp, mà là cầu nối thăng hoa cảm xúc giữa ban tổ chức và công chúng."
+              </p>
+</div>
+</div>
+</div>
+<!-- Right: Bio Narrative -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<h3 class="font-headline-md text-headline-md text-on-surface leading-snug">
+            8+ Năm Định Hình Chuẩn Mực Dẫn Chương Trình Song Ngữ Cao Cấp
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Tốt nghiệp Học viện Ngoại giao cùng chứng chỉ IELTS 8.0 chuẩn quốc tế, Hoàng Anh mang đến phong cách dẫn đĩnh đạc, khả năng <strong class="text-sky-800">dịch đuổi (live translation) chuẩn xác</strong> và tư duy xử lý khủng hoảng linh hoạt trong mọi tình huống sân khấu bất ngờ.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Từ những diễn đàn kinh tế quốc tế mang tính ngoại giao cao đến các đêm Gala Year End rực lửa nhiệt huyết hay không gian lễ cưới đầy rung cảm, Hoàng Anh luôn cân bằng chính xác giữa <span class="text-sky-800 font-semibold drop-shadow-[0_0_6px_rgba(56,189,248,0.3)]">tính trang trọng học thuật</span> và <span class="text-sky-800 font-semibold drop-shadow-[0_0_6px_rgba(56,189,248,0.3)]">năng lượng kết nối tự nhiên</span>.
+          </p>
+<!-- Highlights Checklist -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-high/60 border border-slate-200">
+<span class="material-symbols-outlined text-sky-800 text-[20px] drop-shadow-[0_0_6px_rgba(56,189,248,0.5)]">verified</span>
+<span class="font-title-md text-title-md text-on-surface">Phát âm Anh - Mỹ chuẩn xác</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-high/60 border border-slate-200">
+<span class="material-symbols-outlined text-sky-800 text-[20px] drop-shadow-[0_0_6px_rgba(56,189,248,0.5)]">psychology</span>
+<span class="font-title-md text-title-md text-on-surface">Tư duy biên tập kịch bản sâu sắc</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-high/60 border border-slate-200">
+<span class="material-symbols-outlined text-sky-800 text-[20px] drop-shadow-[0_0_6px_rgba(56,189,248,0.5)]">diversity_3</span>
+<span class="font-title-md text-title-md text-on-surface">Làm chủ sân khấu từ 50 - 5.000 khách</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-high/60 border border-slate-200">
+<span class="material-symbols-outlined text-sky-800 text-[20px] drop-shadow-[0_0_6px_rgba(56,189,248,0.5)]">schedule</span>
+<span class="font-title-md text-title-md text-on-surface">Tác phong quân đội, đúng giờ 100%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- High-Impact Metric Strip -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
+<div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-surface-container border border-slate-200 text-center shadow-lg group hover:bg-surface-container-high hover:border-sky-300 transition-all duration-300">
+<span class="font-display-hero text-[48px] lg:text-display-hero text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 to-sky-400 leading-none group-hover:scale-105 transition-transform drop-shadow-[0_0_12px_rgba(56,189,248,0.35)]">8+</span>
+<span class="font-title-md text-title-md text-on-surface mt-2">Năm Kinh Nghiệm</span>
+<span class="font-body-sm text-body-sm text-slate-600 mt-1">Dẫn truyền hình &amp; sự kiện</span>
+</div>
+<div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-surface-container border border-slate-200 text-center shadow-lg group hover:bg-surface-container-high hover:border-sky-300 transition-all duration-300">
+<span class="font-display-hero text-[48px] lg:text-display-hero text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 to-sky-400 leading-none group-hover:scale-105 transition-transform drop-shadow-[0_0_12px_rgba(56,189,248,0.35)]">500+</span>
+<span class="font-title-md text-title-md text-on-surface mt-2">Sự Kiện Thành Công</span>
+<span class="font-body-sm text-body-sm text-slate-600 mt-1">Trong nước &amp; quốc tế</span>
+</div>
+<div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-surface-container border border-slate-200 text-center shadow-lg group hover:bg-surface-container-high hover:border-sky-300 transition-all duration-300">
+<span class="font-display-hero text-[48px] lg:text-display-hero text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 to-sky-400 leading-none group-hover:scale-105 transition-transform drop-shadow-[0_0_12px_rgba(56,189,248,0.35)]">50+</span>
+<span class="font-title-md text-title-md text-on-surface mt-2">Tập Đoàn Đối Tác</span>
+<span class="font-body-sm text-body-sm text-slate-600 mt-1">Khách hàng trung thành</span>
+</div>
+<div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-surface-container border border-slate-200 text-center shadow-lg group hover:bg-surface-container-high hover:border-sky-300 transition-all duration-300">
+<span class="font-display-hero text-[48px] lg:text-display-hero text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 to-sky-400 leading-none group-hover:scale-105 transition-transform drop-shadow-[0_0_12px_rgba(56,189,248,0.35)]">99.8%</span>
+<span class="font-title-md text-title-md text-on-surface mt-2">Hài Lòng Tuyệt Đối</span>
+<span class="font-body-sm text-body-sm text-slate-600 mt-1">Đánh giá 5 sao từ đối tác</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. DỊCH VỤ / THỂ LOẠI CHƯƠNG TRÌNH -->
+<section class="py-space-3xl px-6 lg:px-12 bg-surface relative" id="the-loai">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase">Lĩnh vực chuyên môn</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Thể Loại Chương Trình Đảm Nhận</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tối ưu phong cách diễn đạt và năng lượng sân khấu tương thích với bản sắc riêng của từng loại hình sự kiện.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-sky-800 hover:text-sky-800 font-title-md text-title-md group transition-colors" href="#booking">
+          Tư vấn phong cách dẫn phù hợp
+          <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- 6 Event Categories Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="p-8 rounded-2xl bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all duration-300 flex flex-col justify-between gap-6 group hover:-translate-y-1 shadow-lg hover:shadow-[0_12px_30px_rgba(56,189,248,0.15)]">
+<div class="flex flex-col gap-4">
+<div class="w-14 h-14 rounded-xl bg-cyan-400/10 border border-sky-200 flex items-center justify-center text-sky-800 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-sky-500 group-hover:text-slate-950 transition-all duration-300 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+<span class="material-symbols-outlined text-[28px]">account_balance</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 bg-surface-container border border-slate-200 px-2.5 py-1 rounded">Summit</span>
+<span class="font-label-caps text-label-caps text-slate-600 bg-surface-container px-2.5 py-1 rounded">Diễn Đàn</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Hội Nghị &amp; Thượng Đỉnh Quốc Tế</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Phong thái đĩnh đạc, thấu hiểu quy tắc ngoại giao chuẩn mực. Dịch thuật song song trên sân khấu, làm chủ các phiên thảo luận panel đa quốc gia.
+            </p>
+</div>
+<div class="pt-4 flex items-center text-slate-600 group-hover:text-sky-800 font-body-sm text-body-sm transition-colors">
+            Khám phá chi tiết <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-8 rounded-2xl bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all duration-300 flex flex-col justify-between gap-6 group hover:-translate-y-1 shadow-lg hover:shadow-[0_12px_30px_rgba(56,189,248,0.15)]">
+<div class="flex flex-col gap-4">
+<div class="w-14 h-14 rounded-xl bg-cyan-400/10 border border-sky-200 flex items-center justify-center text-sky-800 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-sky-500 group-hover:text-slate-950 transition-all duration-300 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+<span class="material-symbols-outlined text-[28px]">wine_bar</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 bg-surface-container border border-slate-200 px-2.5 py-1 rounded">Gala Dinner</span>
+<span class="font-label-caps text-label-caps text-slate-600 bg-surface-container px-2.5 py-1 rounded">Year End Party</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Gala Dinner &amp; Tri Ân Khách Hàng</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Lịch lãm, trang trọng nhưng không kém phần ấm áp. Khéo léo truyền cảm hứng tự hào doanh nghiệp và thắt chặt tình gắn kết với các cổ đông, đối tác.
+            </p>
+</div>
+<div class="pt-4 flex items-center text-slate-600 group-hover:text-sky-800 font-body-sm text-body-sm transition-colors">
+            Khám phá chi tiết <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-8 rounded-2xl bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all duration-300 flex flex-col justify-between gap-6 group hover:-translate-y-1 shadow-lg hover:shadow-[0_12px_30px_rgba(56,189,248,0.15)]">
+<div class="flex flex-col gap-4">
+<div class="w-14 h-14 rounded-xl bg-cyan-400/10 border border-sky-200 flex items-center justify-center text-sky-800 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-sky-500 group-hover:text-slate-950 transition-all duration-300 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+<span class="material-symbols-outlined text-[28px]">rocket_launch</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 bg-surface-container border border-slate-200 px-2.5 py-1 rounded">Launch Event</span>
+<span class="font-label-caps text-label-caps text-slate-600 bg-surface-container px-2.5 py-1 rounded">Grand Opening</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Lễ Ra Mắt Sản Phẩm &amp; Khai Trương</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Năng lượng bùng nổ, ngữ điệu hào hùng thu hút toàn bộ sự chú ý của giới truyền thông và khách mời vào tâm điểm khoảnh khắc ra mắt then chốt.
+            </p>
+</div>
+<div class="pt-4 flex items-center text-slate-600 group-hover:text-sky-800 font-body-sm text-body-sm transition-colors">
+            Khám phá chi tiết <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-8 rounded-2xl bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all duration-300 flex flex-col justify-between gap-6 group hover:-translate-y-1 shadow-lg hover:shadow-[0_12px_30px_rgba(56,189,248,0.15)]">
+<div class="flex flex-col gap-4">
+<div class="w-14 h-14 rounded-xl bg-cyan-400/10 border border-sky-200 flex items-center justify-center text-sky-800 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-sky-500 group-hover:text-slate-950 transition-all duration-300 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+<span class="material-symbols-outlined text-[28px]">favorite</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 bg-surface-container border border-slate-200 px-2.5 py-1 rounded">Luxury Wedding</span>
+<span class="font-label-caps text-label-caps text-slate-600 bg-surface-container px-2.5 py-1 rounded">Private Party</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Đám Cưới Sang Trọng &amp; Lễ Cưới Thượng Lưu</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Dẫn dắt bằng trái tim, tinh tế và giàu cảm xúc. Kể câu chuyện tình yêu độc bản của cặp đôi với ngôn từ thanh nhã, xúc động mọi thế hệ quan khách.
+            </p>
+</div>
+<div class="pt-4 flex items-center text-slate-600 group-hover:text-sky-800 font-body-sm text-body-sm transition-colors">
+            Khám phá chi tiết <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="p-8 rounded-2xl bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all duration-300 flex flex-col justify-between gap-6 group hover:-translate-y-1 shadow-lg hover:shadow-[0_12px_30px_rgba(56,189,248,0.15)]">
+<div class="flex flex-col gap-4">
+<div class="w-14 h-14 rounded-xl bg-cyan-400/10 border border-sky-200 flex items-center justify-center text-sky-800 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-sky-500 group-hover:text-slate-950 transition-all duration-300 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+<span class="material-symbols-outlined text-[28px]">campaign</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 bg-surface-container border border-slate-200 px-2.5 py-1 rounded">Team Building</span>
+<span class="font-label-caps text-label-caps text-slate-600 bg-surface-container px-2.5 py-1 rounded">Festival</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Team Building &amp; Sự Kiện Ngoài Trời</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Kỹ năng hoạt náo đỉnh cao, đốt cháy tinh thần đồng đội với những minigame văn minh, hài hước, văn hóa doanh nghiệp được lồng ghép duyên dáng.
+            </p>
+</div>
+<div class="pt-4 flex items-center text-slate-600 group-hover:text-sky-800 font-body-sm text-body-sm transition-colors">
+            Khám phá chi tiết <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+</div>
+</div>
+<!-- Card 6 (Bilingual Signature) -->
+<div class="p-8 rounded-2xl bg-gradient-to-br from-surface-container-high via-surface-container-low to-surface-container-lowest border border-sky-200 hover:border-cyan-400/60 transition-all duration-300 flex flex-col justify-between gap-6 group hover:-translate-y-1 shadow-[0_0_30px_rgba(56,189,248,0.18)] relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-cyan-400/15 blur-xl"></div>
+<div class="flex flex-col gap-4 relative z-10">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-r from-cyan-400 to-sky-500 flex items-center justify-center text-slate-950 shadow-[0_0_20px_rgba(0,210,255,0.4)]">
+<span class="material-symbols-outlined text-[28px]">record_voice_over</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 bg-surface-container-highest border border-sky-200 px-2.5 py-1 rounded">Signature</span>
+<span class="font-label-caps text-label-caps text-slate-600 bg-surface-container-highest px-2.5 py-1 rounded">IELTS 8.0</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-400">MC Song Ngữ Anh – Việt Chuyên Biệt</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Chuyển ngữ mượt mà theo thời gian thực, giữ nguyên vẹn sắc thái cảm xúc và độ trang trọng của hai ngôn ngữ, không vấp váp, chuẩn quốc tế.
+            </p>
+</div>
+<div class="pt-4 flex items-center text-sky-800 font-body-sm text-body-sm font-semibold">
+            Dịch vụ cốt lõi hàng đầu <span class="material-symbols-outlined text-[16px] ml-1 text-sky-800 drop-shadow-[0_0_4px_rgba(56,189,248,0.6)]">stars</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. VIDEO DEMO (TRỌNG TÂM NHẤT) -->
+<section class="py-space-3xl px-6 lg:px-12 bg-surface-container-lowest relative" id="video-demo">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<!-- Video Demo Header -->
+<div class="flex flex-col items-center text-center gap-3">
+<span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase">Trải nghiệm thực chiến</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Video Demo &amp; Sân Khấu Thực Tế</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Minh chứng rõ ràng nhất về chất giọng, nhịp điệu sân khấu và thần thái tự tin của MC Hoàng Anh qua các thước phim sự kiện trực tiếp.
+        </p>
+</div>
+<!-- Centerpiece Main Highlight Reel Player -->
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container border border-sky-200 shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_40px_rgba(56,189,248,0.15)] group">
+<div class="relative aspect-video w-full">
+<img class="w-full h-full object-cover" data-alt="Cinematic wide-angle view of MC Hoang Anh hosting a grand multinational economic forum on stage, massive LED curved wall displaying golden graphic motifs and bilingual titles, sharp theatrical lighting, teleprompter, packed VIP audience in formal suits, 4K resolution broadcast quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr_fCJ2u6Ot3eTjeP8mgq1IWKVmrCvdtpOIbl6r-PFdbl40JgkyuyPh_clguXKCYs1Wa7EgTKVF0DTu-_p4Jl0vHw88MObzhxPh9pEC3Zr4uj32GEWVZKyoL6ebCxWaTOvkKzIRA2GogonfGqd_ukdGS13rgOj7R75joxNeLt0FJUsoAUUEU1Oar0RjVDdJ493Dfj_XZ6jLtCyCS2wXiqD_USgNj7i38Y6Y8hIgnVyUtmKPVaKjAsJtQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<!-- Big Floating Central Play Action -->
+<div class="absolute inset-0 flex items-center justify-center">
+<button aria-label="Phát video highlight" class="w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-surface/80 backdrop-blur-md border border-sky-300 flex items-center justify-center text-sky-800 shadow-[0_0_40px_rgba(56,189,248,0.5)] group-hover:scale-110 group-hover:bg-cyan-400 group-hover:text-slate-950 transition-all duration-300">
+<span class="material-symbols-outlined text-[44px] ml-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Video Badges Top Left & Right -->
+<div class="absolute top-6 left-6 flex items-center gap-2">
+<span class="px-3.5 py-1.5 rounded-full bg-surface-container-high/90 backdrop-blur-md border border-sky-200 text-sky-800 font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 shadow-[0_0_12px_rgba(56,189,248,0.25)]">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+              Featured Reel 2024
+            </span>
+<span class="px-3.5 py-1.5 rounded-full bg-surface-container-high/90 backdrop-blur-md border border-slate-200 text-sky-800 font-label-caps text-label-caps">
+              4K Ultra HD
+            </span>
+</div>
+<!-- Video Details Bottom Overlay -->
+<div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                Reel Tổng Hợp Sân Khấu Sự Kiện Đỉnh Cao 2024
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Trích đoạn diễn thuyết, dịch trực tiếp song ngữ và xử lý kịch bản cho 20+ sự kiện tầm vóc.
+              </p>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-caps text-label-caps text-sky-800 px-3 py-1.5 rounded-lg bg-surface/80 backdrop-blur-md border border-sky-200 shadow-[0_0_10px_rgba(56,189,248,0.2)]">
+                Thời lượng: 03:45
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub-grid of 6 categorized short clips -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Clip 1 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all group shadow-md cursor-pointer hover:shadow-[0_8px_24px_rgba(56,189,248,0.12)]">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="APEC Green Economy Forum stage with MC Hoang Anh speaking into a podium microphone, prominent international flags, corporate dignitaries, elegant professional dark teal and gold lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeOzn_TBaJLPcffBRbTsKowVrddUuDsl4cidOslHwlask2JriOumV4yuDvk2sPLAV9KT2jbDCrl33mIaGPd90LJvngrQ0MhcLp8-XqmYx2Z6vkoYC_eUPYQ6x68McbVXsyRpNxcpMAnAgPI5sIR6tndd_qY3kQc_mf4XLt7F7rklEIkKCzUppG3_DwzDAoasyoo--ti-1pA_ArfoD_DYihvAdIbK539y4aefZnAOP6_Sze7d3iWDs7pw"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-surface/10 transition-colors"></div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface/90 border border-slate-200 text-[11px] font-semibold text-sky-800">04:15</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Hội Nghị Cấp Cao</span>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-1">Diễn Đàn Kinh Tế Xanh APEC (Song ngữ Anh - Việt)</h4>
+<p class="font-body-sm text-body-sm text-slate-600">Phong cách trang trọng, chuẩn mực ngoại giao quốc tế.</p>
+</div>
+</div>
+<!-- Clip 2 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all group shadow-md cursor-pointer hover:shadow-[0_8px_24px_rgba(56,189,248,0.12)]">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Lavish corporate gala dinner stage with massive LED screens, gold confetti dropping, MC Hoang Anh energizing hundreds of VIP guests in black tie attire, celebratory atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfZIIcnNJCUz4iR8Rq6-IRTSNY1EGokINJX2qo9wNSsNXEwa8dnbi8Kw_KKdduENLAU-8vazMmEHZ0Mdof0gbiJOHhqTdxkzPYQZBYDGaNCbk2IVQ7NajZ1CsllFNOMc_ouoilAOF6-I9XK8mxPkm57FxEIACcjWOgzgJNRtslsKe4sY_NyYBXY478RvODQAJSJVN2g4jfKd0z2q-PkIQLdHKj7J_w-32Muj4_QXBnhX1GFBIzGvpujQ"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-surface/10 transition-colors"></div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface/90 border border-slate-200 text-[11px] font-semibold text-sky-800">03:30</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Gala Doanh Nghiệp</span>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-1">Gala Dinner Tập Đoàn Vingroup (Trang trọng &amp; Hào hùng)</h4>
+<p class="font-body-sm text-body-sm text-slate-600">Khí thế bùng nổ, truyền tải sứ mệnh doanh nghiệp xúc cảm.</p>
+</div>
+</div>
+<!-- Clip 3 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all group shadow-md cursor-pointer hover:shadow-[0_8px_24px_rgba(56,189,248,0.12)]">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Fairytale wedding ceremony at JW Marriott ballroom with crystal chandeliers, white floral arches, romantic golden candlelight, MC Hoang Anh leading the vows with warm tender smile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHYacwx4PME32NcN96gujmV3_06y8LObVKLxr17pwfvyvfVMQHJ1Vwmx0KtYhj-QvqVF1K28er8JiVGP1lDE5n1tJnpUv2FLFVygCm2F7c05DvRixK61cfevppQLTozQAEb9E3O721NG5U1UvRWQwf5P4qInrUIyihEMFoKkTlpDUxOgz0HOK8cCQMZJTAwx66Ui9DbR8uYbUKkrlZ7bXIacvhkWyxBW9cfOxVn3w1BeeZM7wkhWODoQ"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-surface/10 transition-colors"></div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface/90 border border-slate-200 text-[11px] font-semibold text-sky-800">05:10</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Tiệc Cưới Thượng Lưu</span>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-1">Đám Cưới Cổ Tích tại JW Marriott Hanoi</h4>
+<p class="font-body-sm text-body-sm text-slate-600">Lời thoại sâu lắng, chạm thẳng đến trái tim quan khách.</p>
+</div>
+</div>
+<!-- Clip 4 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all group shadow-md cursor-pointer hover:shadow-[0_8px_24px_rgba(56,189,248,0.12)]">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Futuristic electric car launch event stage unveiling VinFast luxury SUV with laser lights, smoke machine, MC Hoang Anh introducing technical features with high tech enthusiasm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC60AKqnDBL3te05ClGJ0E3yy70mjV8HmQtdQqeiiPBIlIg2C48cvotRorj0XBHK2uUTSYZfj3jnC-lSrbYvwtGuKOLJNuKbNwzICO741s7fM0oBqlpex2t8L2eK9AnqOazu8BpZuJA0S3UFycaRFCdPGYtUTen1zdaJIzMrGmELJOCQ2izhFV81ztTMJazoEwaHRn0XewWqrFeaowTyC-p3iA9ybqfHBq714ZqPa4kzZMsPwk2ILyM4g"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-surface/10 transition-colors"></div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface/90 border border-slate-200 text-[11px] font-semibold text-sky-800">02:45</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Ra Mắt Sản Phẩm</span>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-1">Lễ Ra Mắt Xe Điện VinFast VF9</h4>
+<p class="font-body-sm text-body-sm text-slate-600">Nhịp dẫn dồn dập, tạo khoảnh khắc đếm ngược bùng nổ.</p>
+</div>
+</div>
+<!-- Clip 5 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all group shadow-md cursor-pointer hover:shadow-[0_8px_24px_rgba(56,189,248,0.12)]">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Forbes Vietnam leadership talkshow set with armchairs, intimate spotlighting, MC Hoang Anh moderating a high-level discussion between top CEOs and startup founders." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS-3XS3USwBFNCHYPLlpRF1tiojcrPG4RcEyFBFdVBF0TMtr2OCreVPwkHLvtWA1J-WKwLe2WngG-1NVYT6H4Fjbuyn3Uq2EhDtj-sedctRqG7X0jQv8oQBzfFhDXANhU7FyuN_d2B3VxgWuVOECJI5OXLoYViLJVwRQDe4EwVWWD4G0d6Fs6m-LKIKcovCqy4vG9-ByadPI2OzcY_L-yQUK-CZIZhRhCR3mHvGDesmerxFemLk-EfLQ"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-surface/10 transition-colors"></div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface/90 border border-slate-200 text-[11px] font-semibold text-sky-800">06:20</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Talkshow &amp; Phỏng Vấn</span>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-1">Talkshow Doanh Nhân Khởi Nghiệp Forbes Việt Nam</h4>
+<p class="font-body-sm text-body-sm text-slate-600">Hỏi đáp tinh tế, gợi mở những góc nhìn chuyên môn sâu sắc.</p>
+</div>
+</div>
+<!-- Clip 6 -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-low border border-slate-200 hover:border-sky-300 hover:bg-surface-container transition-all group shadow-md cursor-pointer hover:shadow-[0_8px_24px_rgba(56,189,248,0.12)]">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Massive Techcombank Year End Party with 3000 people waving glowing lightsticks, MC Hoang Anh leading the countdown toast with infectious energy and champagne toast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvR8Iywr6qIvcr4cx28CadTlsJ1lYZaheNS8LFBFtOacIqVkxZgXzi85cuKu22bro3cOr-sf7G-5yFcQQCbgKKljhIePec4-RBD3C19-uyRBMx7AJZSOekfyezp78cx3s2XMcfPOdEo8aJp-nBT3HvMEFo1ndq3NZckgIU1hGKRfVMHqXRurCufVtl2gZ7xoGx9Z8CBOHP6U12gP1kX56sQlZR47Bt7W6asBgODow4K2Xh4135e4bmyQ"/>
+<div class="absolute inset-0 bg-surface/40 group-hover:bg-surface/10 transition-colors"></div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface/90 border border-slate-200 text-[11px] font-semibold text-sky-800">03:50</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Year End Party</span>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-1">Year End Party Techcombank - Bùng Nổ Năng Lượng</h4>
+<p class="font-body-sm text-body-sm text-slate-600">Khuấy động hội trường 3000 người, gắn kết tuyệt đối.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. DỰ ÁN & KHÁCH HÀNG TIÊU BIỂU -->
+<section class="py-space-3xl px-6 lg:px-12 bg-surface relative" id="du-an">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<!-- Partner Logo Strip -->
+<div class="flex flex-col items-center gap-6">
+<span class="font-label-caps text-label-caps text-sky-800/80 tracking-widest uppercase">
+          Đối tác chiến lược &amp; Khách hàng doanh nghiệp tiêu biểu
+        </span>
+<div class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
+<div class="h-16 rounded-xl bg-surface-container border border-cyan-400/10 flex items-center justify-center p-3 text-slate-600 font-title-md text-center hover:text-sky-800 hover:border-sky-300 hover:bg-surface-container-high transition-all">VinFast</div>
+<div class="h-16 rounded-xl bg-surface-container border border-cyan-400/10 flex items-center justify-center p-3 text-slate-600 font-title-md text-center hover:text-sky-800 hover:border-sky-300 hover:bg-surface-container-high transition-all">Samsung</div>
+<div class="h-16 rounded-xl bg-surface-container border border-cyan-400/10 flex items-center justify-center p-3 text-slate-600 font-title-md text-center hover:text-sky-800 hover:border-sky-300 hover:bg-surface-container-high transition-all">Vietcombank</div>
+<div class="h-16 rounded-xl bg-surface-container border border-cyan-400/10 flex items-center justify-center p-3 text-slate-600 font-title-md text-center hover:text-sky-800 hover:border-sky-300 hover:bg-surface-container-high transition-all">Mercedes</div>
+<div class="h-16 rounded-xl bg-surface-container border border-cyan-400/10 flex items-center justify-center p-3 text-slate-600 font-title-md text-center hover:text-sky-800 hover:border-sky-300 hover:bg-surface-container-high transition-all">Unilever</div>
+<div class="h-16 rounded-xl bg-surface-container border border-cyan-400/10 flex items-center justify-center p-3 text-slate-600 font-title-md text-center hover:text-sky-800 hover:border-sky-300 hover:bg-surface-container-high transition-all">Shopee</div>
+<div class="h-16 rounded-xl bg-surface-container border border-cyan-400/10 flex items-center justify-center p-3 text-slate-600 font-title-md text-center hover:text-sky-800 hover:border-sky-300 hover:bg-surface-container-high transition-all">Techcombank</div>
+<div class="h-16 rounded-xl bg-surface-container border border-cyan-400/10 flex items-center justify-center p-3 text-slate-600 font-title-md text-center hover:text-sky-800 hover:border-sky-300 hover:bg-surface-container-high transition-all">FPT Corp</div>
+</div>
+</div>
+<!-- Section Title & Filter Tabs -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-8">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase">Thư viện hình ảnh</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Khoảnh Khắc Tỏa Sáng</h2>
+</div>
+<!-- Filter Tabs Strip -->
+<div class="flex flex-wrap items-center gap-2 p-1.5 rounded-xl bg-surface-container border border-slate-200">
+<button class="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 font-title-md text-title-md font-bold shadow-[0_0_15px_rgba(56,189,248,0.4)]">Tất cả</button>
+<button class="px-4 py-2 rounded-lg text-slate-600 hover:text-sky-800 font-title-md text-title-md hover:bg-surface-container-high transition-colors">Hội nghị Quốc tế</button>
+<button class="px-4 py-2 rounded-lg text-slate-600 hover:text-sky-800 font-title-md text-title-md hover:bg-surface-container-high transition-colors">Gala Dinner</button>
+<button class="px-4 py-2 rounded-lg text-slate-600 hover:text-sky-800 font-title-md text-title-md hover:bg-surface-container-high transition-colors">Lễ Cưới</button>
+</div>
+</div>
+<!-- Mosaic Gallery Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="md:col-span-2 relative rounded-2xl overflow-hidden h-72 lg:h-80 group border border-slate-200 shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Wide shot of a prestigious international summit in Hanoi with ambassadors and government officials, MC Hoang Anh introducing key speakers in English and Vietnamese with great poise, crisp luxury stage decor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PibInI2gIIxDoevpApAN0Noj0ONuFsIv0dguwNUnGP7GkBy6wffbiv4Z-GV9XfyELDoEUKy6n_AgrOJ6FeRIJekJyEKia3i5SNPX5U07xnHhLYs87HshQnPPdkoBdBsa9_2EkeZ5M5T8XjRVyZuYNK3FW2Lit7QlEYtSkmeRO9zbNQwviBUtNinptuqCZdsbpDnW3QeUICoOxRuMSWqHoBaBCDV-ImEAYhM3YZAEutMzh50oHW5Jog"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/90 via-surface/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Hội Nghị Cấp Cao</span>
+<p class="font-title-md text-title-md text-on-surface">Diễn Đàn Đổi Mới Sáng Tạo Quốc Gia</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden h-72 lg:h-80 group border border-slate-200 shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Red carpet entrance moment at luxury fashion gala, MC Hoang Anh welcoming VIP celebrity guests with handheld mic, sleek midnight blue suit with champagne pocket square." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj45n2hgd5OP6g7H03Fw-qQH2EVgeuvpsVjahFKSdyXJYxHJMs8S8GsIEM9ZzHu0RSheiFh5XrAzIvgPeQYFv8kxGVcbJfB-uuTpIofoQTiEIQWU8tAYVKaNkuWKRhkXzY0S3OFWK7zsctNYiIcMONO5CvJIPocYXXq5bZp6wnIfybcZk4FM5FMyv6uYEw2tidQM2fziTBk3BUoDmAq6nBXh4ldnWanOxytL91gzRaeHCCAM0OnCJRXA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/90 via-surface/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Red Carpet</span>
+<p class="font-title-md text-title-md text-on-surface">ELLE Fashion Awards</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden h-72 lg:h-80 group border border-slate-200 shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Romantic destination wedding by the beach in Da Nang, MC Hoang Anh dressed in soft cream linen suit officiating vows as sunset reflects on ocean waves, intimate and emotional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBroht6Cxwss7jUYfNy8egKsNCEvV0-1u01i1qe51pTeNhwUww9Q3dnQtNsH33vn9Zj4bNpJ4zTU6wNtRiP4HXPTimtDf6jsRwh6R67c1EOnmXgjQYxOT2pUXRLv2S__BtJBsz-efb6r_RLJ-SzG4RF5IrfMsbhOJWHRCNCnCDFg2wEma5gCRniEB1PAwOs8olNXa1de1oY8A_0WAlg6zUqgQyeha2Dkg0__dYei_eaIb6PI0z3e5yH9Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/90 via-surface/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase">Destination Wedding</span>
+<p class="font-title-md text-title-md text-on-surface">InterContinental Danang</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. ĐÁNH GIÁ TỪ KHÁCH HÀNG (TESTIMONIALS) -->
+<section class="py-space-3xl px-6 lg:px-12 bg-surface-container-lowest relative" id="danh-gia">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col items-center text-center gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase">Phản hồi thực tế</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Khách Hàng Nói Gì Về Hoàng Anh?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Sự an tâm tuyệt đối của ban tổ chức chính là thước đo giá trị cao nhất trong từng sự kiện.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Testimonial 1 -->
+<div class="p-8 rounded-2xl bg-surface-container border border-slate-200 hover:border-sky-300 flex flex-col justify-between gap-6 shadow-xl relative overflow-hidden group hover:bg-surface-container-high transition-all duration-300 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)]">
+<div class="flex flex-col gap-4 relative z-10">
+<!-- 5 Stars -->
+<div class="flex items-center text-sky-800 gap-1 drop-shadow-[0_0_6px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "Hoàng Anh sở hữu phong thái sân khấu vô cùng bản lĩnh, khả năng dịch đuổi song ngữ xuất sắc. Trong sự kiện hội nghị cấp cao của Sun Group, phần phát biểu của đối tác nước ngoài phát sinh bất ngờ nhưng Hoàng Anh đã biên dịch lại vô cùng mượt mà và chuẩn mực."
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<div class="w-12 h-12 rounded-full bg-cyan-400/20 border border-sky-200 flex items-center justify-center text-sky-800 font-bold text-lg shadow-[0_0_10px_rgba(56,189,248,0.3)]">
+              LT
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Ms. Lê Thu Thảo</span>
+<span class="font-body-sm text-body-sm text-slate-600">Giám Đốc Truyền Thông Sun Group</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-8 rounded-2xl bg-surface-container border border-slate-200 hover:border-sky-300 flex flex-col justify-between gap-6 shadow-xl relative overflow-hidden group hover:bg-surface-container-high transition-all duration-300 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)]">
+<div class="flex flex-col gap-4 relative z-10">
+<div class="flex items-center text-sky-800 gap-1 drop-shadow-[0_0_6px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "Chuyên nghiệp từ khâu tiền kỳ duyệt kịch bản đến lúc lên sân khấu. Hoàng Anh nắm bắt tinh thần thương hiệu cực nhanh và tuân thủ chặt chẽ thời gian rundown từng phút một. Một MC hiếm hoi đáp ứng tiêu chuẩn agency quốc tế khắt khe."
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<div class="w-12 h-12 rounded-full bg-cyan-400/20 border border-sky-200 flex items-center justify-center text-sky-800 font-bold text-lg shadow-[0_0_10px_rgba(56,189,248,0.3)]">
+              DN
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Mr. David Nguyen</span>
+<span class="font-body-sm text-body-sm text-slate-600">Event Director, Ogilvy Vietnam</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-8 rounded-2xl bg-surface-container border border-slate-200 hover:border-sky-300 flex flex-col justify-between gap-6 shadow-xl relative overflow-hidden group hover:bg-surface-container-high transition-all duration-300 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)]">
+<div class="flex flex-col gap-4 relative z-10">
+<div class="flex items-center text-sky-800 gap-1 drop-shadow-[0_0_6px_rgba(56,189,248,0.5)]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "Giọng nói của Hoàng Anh đã khiến cả hội trường xúc động rơi nước mắt trong thời khắc làm lễ, rồi ngay sau đó lại khiến mọi người cười rạng rỡ với minigame tiệc cưới. Hai bên gia đình đều khen ngợi hết lời vì sự duyên dáng và ấm áp."
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<div class="w-12 h-12 rounded-full bg-cyan-400/20 border border-sky-200 flex items-center justify-center text-sky-800 font-bold text-lg shadow-[0_0_10px_rgba(56,189,248,0.3)]">
+              MQ
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Minh Quân &amp; Bích Trâm</span>
+<span class="font-body-sm text-body-sm text-slate-600">Tiệc cưới tại JW Marriott</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. QUY TRÌNH LÀM VIỆC (4 BƯỚC TINH GỌN) -->
+<section class="py-space-3xl px-6 lg:px-12 bg-surface relative">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col items-center text-center gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase">Quy trình làm việc</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">4 Bước Chuẩn Hóa Chuyên Nghiệp</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Rõ ràng, minh bạch và cam kết trách nhiệm tuyệt đối từ lúc tiếp nhận đến khi hạ màn sự kiện.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-6 rounded-2xl bg-surface-container border border-slate-200 flex flex-col gap-4 relative group hover:bg-surface-container-high hover:border-sky-300 transition-all duration-300">
+<span class="font-display-hero text-headline-lg text-transparent bg-clip-text bg-gradient-to-br from-cyan-400/60 to-sky-400/20 font-bold">01</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Tiếp Nhận Yêu Cầu</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Khách hàng để lại thông tin ngày giờ, địa điểm và tính chất chương trình. Hoàng Anh phản hồi xác nhận lịch trống trong 15 phút.
+          </p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container border border-slate-200 flex flex-col gap-4 relative group hover:bg-surface-container-high hover:border-sky-300 transition-all duration-300">
+<span class="font-display-hero text-headline-lg text-transparent bg-clip-text bg-gradient-to-br from-cyan-400/60 to-sky-400/20 font-bold">02</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Trao Đổi Kịch Bản</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Họp online hoặc trực tiếp phân tích chi tiết timeline, tone &amp; mood, key message của thương hiệu để hiệu đính kịch bản tối ưu nhất.
+          </p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container border border-slate-200 flex flex-col gap-4 relative group hover:bg-surface-container-high hover:border-sky-300 transition-all duration-300">
+<span class="font-display-hero text-headline-lg text-transparent bg-clip-text bg-gradient-to-br from-cyan-400/60 to-sky-400/20 font-bold">03</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Chốt Hợp Đồng &amp; Giữ Lịch</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Bảng báo giá chi tiết, hợp đồng pháp lý minh bạch có xuất hóa đơn VAT đầy đủ theo đúng yêu cầu tài chính của doanh nghiệp.
+          </p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container border border-sky-200 flex flex-col gap-4 relative group hover:bg-surface-container-high hover:border-cyan-400/60 transition-all duration-300 shadow-[0_0_20px_rgba(56,189,248,0.15)]">
+<span class="font-display-hero text-headline-lg text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 to-sky-400 font-bold drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]">04</span>
+<h3 class="font-title-lg text-title-lg text-sky-800 font-semibold">Dẫn Chương Trình &amp; Tỏa Sáng</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Có mặt trước 90 phút ráp sân khấu với đạo diễn, sound/light check, tổng duyệt kịch bản và phối hợp dẫn dắt sự kiện trọn vẹn.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BÁO GIÁ & GÓI DỊCH VỤ -->
+<section class="py-space-3xl px-6 lg:px-12 bg-surface-container-lowest relative" id="bao-gia">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl">
+<div class="flex flex-col items-center text-center gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase">Đầu tư xứng tầm</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Báo Giá &amp; Gói Dịch Vụ Tham Khảo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Lựa chọn gói dịch vụ phù hợp với ngân sách và quy mô thực tế của chương trình.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<!-- Package 1: Tiêu Chuẩn -->
+<div class="p-8 rounded-2xl bg-surface-container border border-slate-200 flex flex-col justify-between gap-8 shadow-lg">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-slate-600 uppercase tracking-widest">Tiết Kiệm</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Gói Tiêu Chuẩn</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Phù hợp sự kiện nội bộ, khai trương, team building 1 buổi.</p>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-sky-800 font-bold">Từ 8.000.000đ</span>
+<span class="text-slate-600 font-body-sm text-body-sm">/ buổi</span>
+</div>
+<!-- Features list -->
+<ul class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">check_circle</span>
+                Dẫn tiếng Việt chuẩn giọng Hà Nội
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">check_circle</span>
+                MC có mặt trước 60 phút tổng duyệt
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">check_circle</span>
+                Tư vấn chỉnh sửa kịch bản cơ bản
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">check_circle</span>
+                Trang phục vest lịch sự theo tone màu
+              </li>
+</ul>
+</div>
+<a class="w-full py-3.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface border border-slate-200 hover:border-cyan-400/50 font-title-md text-title-md text-center transition-all duration-200" href="#booking">
+            Chọn Gói Tiêu Chuẩn
+          </a>
+</div>
+<!-- Package 2: Cao Cấp (Khuyên Dùng / Neon Cyan Highlight) -->
+<div class="p-8 rounded-2xl bg-surface-container-high border-2 border-cyan-400/60 relative flex flex-col justify-between gap-8 shadow-[0_0_35px_rgba(56,189,248,0.35)] scale-105 z-10">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 font-label-caps text-label-caps font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(0,210,255,0.65)]">
+            Được Lựa Chọn Nhiều Nhất
+          </div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-sky-800 uppercase tracking-widest">Recommended</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Gói Cao Cấp</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gala Dinner, Lễ cưới cao cấp, Year End Party, Hội nghị doanh nghiệp.</p>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-400 font-bold drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]">Từ 15.000.000đ</span>
+<span class="text-slate-600 font-body-sm text-body-sm">/ buổi</span>
+</div>
+<ul class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Song ngữ Việt - Anh linh hoạt
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Biên soạn &amp; hoàn thiện kịch bản chi tiết A-Z
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Có mặt trước 90 phút ráp cùng Ekip đạo diễn
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Tuxedo bespoke may đo cao cấp
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Hỗ trợ 01 buổi họp tiền kỳ cùng BTC
+              </li>
+</ul>
+</div>
+<a class="w-full py-3.5 rounded-lg bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 font-title-md text-title-md font-bold text-center shadow-[0_0_24px_rgba(0,210,255,0.45)] hover:shadow-[0_0_36px_rgba(56,189,248,0.75)] hover:from-cyan-300 hover:to-sky-400 transition-all duration-300" href="#booking">
+            Đặt Lịch Gói Này Ngay
+          </a>
+</div>
+<!-- Package 3: VIP Song Ngữ -->
+<div class="p-8 rounded-2xl bg-surface-container border border-slate-200 flex flex-col justify-between gap-8 shadow-lg">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-slate-600 uppercase tracking-widest">Đẳng Cấp Quốc Tế</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Gói VIP Song Ngữ</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Thượng đỉnh APEC, Diễn đàn kinh tế, Lễ ra mắt xe sang &amp; Luxury Brand.</p>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-sky-800 font-bold">Từ 25.000.000đ</span>
+<span class="text-slate-600 font-body-sm text-body-sm">/ buổi</span>
+</div>
+<ul class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">check_circle</span>
+                Dịch đuổi trực tiếp tại chỗ (Live Interpretation)
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">check_circle</span>
+                Chủ trì tọa đàm (Panel Moderator) cấp cao
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">check_circle</span>
+                Tham gia rehearsal tổng duyệt sân khấu trọn vẹn
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">check_circle</span>
+                Hỗ trợ truyền thông &amp; đăng bài fanpage MC
+              </li>
+</ul>
+</div>
+<a class="w-full py-3.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface border border-slate-200 hover:border-cyan-400/50 font-title-md text-title-md text-center transition-all duration-200" href="#booking">
+            Liên Hệ Báo Giá VIP
+          </a>
+</div>
+</div>
+<div class="text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          * Mức giá mang tính tham khảo và có thể tùy chỉnh linh hoạt dựa trên thời lượng, địa điểm tỉnh xa và tính chất chi tiết của sự kiện.
+        </p>
+</div>
+</div>
+</section>
+<!-- 9. FORM LIÊN HỆ & CTA CUỐI TRANG -->
+<section class="py-space-3xl px-6 lg:px-12 bg-surface relative" id="lien-he">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-2xl" id="booking">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left: Quick Contact Info -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase">Kết nối ngay</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">
+              Sẵn Sàng Cùng Bạn Tạo Nên Một Sự Kiện Xuất Sắc
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Lịch trình thường được chốt trước 2 - 4 tuần. Vui lòng để lại thông tin để ekip Hoàng Anh kiểm tra lịch và gửi kịch bản gợi ý sớm nhất.
+            </p>
+</div>
+<!-- Contact Channels List -->
+<div class="flex flex-col gap-4">
+<a class="p-4 rounded-xl bg-surface-container border border-slate-200 hover:border-sky-300 hover:bg-surface-container-high flex items-center gap-4 transition-all duration-200" href="tel:0909888999">
+<div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-sky-200 flex items-center justify-center text-sky-800 shadow-[0_0_12px_rgba(56,189,248,0.2)]">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-slate-600">Hotline Đặt Lịch Trực Tiếp (24/7)</span>
+<span class="font-title-lg text-title-lg text-on-surface font-semibold">+84 (0) 909 888 999</span>
+</div>
+</a>
+<a class="p-4 rounded-xl bg-surface-container border border-slate-200 hover:border-sky-300 hover:bg-surface-container-high flex items-center gap-4 transition-all duration-200" href="mailto:booking@mchoanganh.com">
+<div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-sky-200 flex items-center justify-center text-sky-800 shadow-[0_0_12px_rgba(56,189,248,0.2)]">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-slate-600">Email Tiếp Nhận Kịch Bản</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">booking@mchoanganh.com</span>
+</div>
+</a>
+<div class="p-4 rounded-xl bg-surface-container border border-slate-200 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-sky-200 flex items-center justify-center text-sky-800 shadow-[0_0_12px_rgba(56,189,248,0.2)]">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-slate-600">Địa Bàn Hoạt Động</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Hà Nội &amp; TP. HCM (Nhận show toàn quốc &amp; quốc tế)</span>
+</div>
+</div>
+</div>
+<!-- Quick Chat Apps -->
+<div class="flex items-center gap-3">
+<span class="font-body-sm text-body-sm text-slate-600">Nhắn tin trực tiếp qua:</span>
+<span class="px-3 py-1 rounded bg-surface-container border border-sky-200 text-sky-800 font-semibold text-xs cursor-pointer hover:bg-cyan-400 hover:text-slate-950 transition-colors">Zalo Official</span>
+<span class="px-3 py-1 rounded bg-surface-container border border-sky-200 text-sky-800 font-semibold text-xs cursor-pointer hover:bg-cyan-400 hover:text-slate-950 transition-colors">Messenger</span>
+</div>
+</div>
+<!-- Right: Dedicated Booking Form -->
+<div class="lg:col-span-7 p-8 lg:p-10 rounded-3xl bg-surface-container-low border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.7),0_0_30px_rgba(56,189,248,0.1)] relative">
+<form class="flex flex-col gap-5" onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Ekip MC Hoàng Anh sẽ liên hệ phản hồi trong 15 phút.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<!-- Họ tên -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-medium">Họ và Tên khách hàng / Đại diện *</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container border border-slate-200 text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400" placeholder="Nguyễn Văn A" required="" type="text"/>
+</div>
+<!-- Số điện thoại (Zalo) -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-medium">Số điện thoại (Zalo) *</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container border border-slate-200 text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400" placeholder="0909 123 456" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<!-- Email -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-medium">Địa chỉ Email</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container border border-slate-200 text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400" placeholder="example@company.com" type="email"/>
+</div>
+<!-- Ngày diễn ra sự kiện -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-medium">Ngày tổ chức sự kiện *</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container border border-slate-200 text-on-surface focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400" required="" type="date"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<!-- Loại hình sự kiện -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-medium">Loại hình sự kiện *</label>
+<select class="w-full px-4 py-3 rounded-lg bg-surface-container border border-slate-200 text-on-surface focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400">
+<option>Hội nghị / Thượng đỉnh quốc tế (Song ngữ)</option>
+<option>Gala Dinner / Tri ân khách hàng</option>
+<option>Lễ ra mắt sản phẩm / Khai trương</option>
+<option>Lễ cưới sang trọng / Private Party</option>
+<option>Team Building / Sự kiện ngoài trời</option>
+<option>Talkshow / Phỏng vấn truyền hình</option>
+<option>Khác (Ghi chú cụ thể bên dưới)</option>
+</select>
+</div>
+<!-- Địa điểm -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-medium">Địa điểm tổ chức *</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container border border-slate-200 text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400" placeholder="Hà Nội, TP.HCM, Khách sạn JW Marriott..." required="" type="text"/>
+</div>
+</div>
+<!-- Ghi chú / Yêu cầu thêm -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-medium">Ghi chú kịch bản / Quy mô khách mời / Yêu cầu đặc biệt</label>
+<textarea class="w-full px-4 py-3 rounded-lg bg-surface-container border border-slate-200 text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-cyan-400 focus:border-cyan-400" placeholder="Ví dụ: Quy mô 300 khách, yêu cầu MC nói tiếng Anh lưu loát với đối tác Hàn Quốc, thời lượng 3 tiếng..." rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="mt-2 w-full py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-sky-500 text-slate-950 font-title-lg text-title-lg font-bold shadow-[0_0_25px_rgba(0,210,255,0.45)] hover:shadow-[0_0_35px_rgba(56,189,248,0.75)] hover:from-cyan-300 hover:to-sky-400 transition-all duration-300 flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">send</span>
+              Gửi Yêu Cầu Đặt Lịch &amp; Nhận Tư Vấn
+            </button>
+<span class="text-center font-body-sm text-body-sm text-slate-600">
+              Cam kết bảo mật 100% thông tin sự kiện và số điện thoại của quý khách hàng.
+            </span>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest pt-space-3xl pb-space-2xl border-t border-slate-200"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop pb-space-2xl"><div class="lg:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-3"><img alt="MC Hoang Anh Logo" class="h-8 w-auto object-contain drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy167l5DFCXeO-xFz2BKqZc5anern2SeGcHyzfqOan8g0kyQyX1vxfiLOra3bcDDBbPWIUgdMGcnLNXp_GT7H2onIvGqWCecGjCgdJAde9dqj4HihTQT9ZR9W9Pmj8ZikpZrOQmKQ-oIkq4aZ4PuNggekW7i3SlHsybciklYZHpVrrbSTf6AsrHXpeNc8ozTkLpfi0JTDIJFluauXKImtSpwEnwl1N1GZ9dVn30NgbpNwF-UM8stO7PQ"/><span class="font-headline-md text-headline-md text-sky-800">Hoàng Anh</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-2">Chuyên nghiệp, tinh tế và truyền cảm hứng. Đồng hành cùng các sự kiện thượng đỉnh, dạ tiệc ngoại giao và đại hội doanh nghiệp đa quốc gia với song ngữ Anh - Việt chuẩn mực.</p><div class="flex items-center gap-3 mt-4"><a aria-label="Facebook" class="w-10 h-10 rounded-full bg-surface-container-high border border-slate-200 flex items-center justify-center text-on-surface-variant hover:text-sky-800 hover:border-cyan-400/50 hover:bg-surface-bright transition-all duration-200" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="YouTube" class="w-10 h-10 rounded-full bg-surface-container-high border border-slate-200 flex items-center justify-center text-on-surface-variant hover:text-sky-800 hover:border-cyan-400/50 hover:bg-surface-bright transition-all duration-200" href="#"><span class="material-symbols-outlined text-[20px]">smart_display</span></a><a aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-surface-container-high border border-slate-200 flex items-center justify-center text-on-surface-variant hover:text-sky-800 hover:border-cyan-400/50 hover:bg-surface-bright transition-all duration-200" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a aria-label="TikTok" class="w-10 h-10 rounded-full bg-surface-container-high border border-slate-200 flex items-center justify-center text-on-surface-variant hover:text-sky-800 hover:border-cyan-400/50 hover:bg-surface-bright transition-all duration-200" href="#"><span class="material-symbols-outlined text-[20px]">graphic_eq</span></a><a aria-label="Zalo" class="w-10 h-10 rounded-full bg-surface-container-high border border-slate-200 flex items-center justify-center text-on-surface-variant hover:text-sky-800 hover:border-cyan-400/50 hover:bg-surface-bright transition-all duration-200" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a></div></div><div class="lg:col-span-3 flex flex-col gap-3"><span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase mb-2">Hạng mục tổ chức</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-sky-800 transition-colors duration-200" href="#">Hội nghị &amp; Thượng đỉnh Quốc tế</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-sky-800 transition-colors duration-200" href="#">Lễ Kỷ niệm &amp; Gala Doanh Nghiệp</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-sky-800 transition-colors duration-200" href="#">Ra mắt Sản phẩm &amp; Luxury Activation</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-sky-800 transition-colors duration-200" href="#">Đám cưới Thượng lưu &amp; Private Party</a></div><div class="lg:col-span-4 flex flex-col gap-3"><span class="font-label-caps text-label-caps text-sky-800 tracking-widest uppercase mb-2">Thông tin Booking trực tiếp</span><div class="flex items-center gap-3 text-on-surface"><span class="material-symbols-outlined text-sky-800 text-[20px]">call</span><span class="font-title-md text-title-md">+84 (0) 909 888 999</span></div><div class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-sky-800 text-[20px]">mail</span><span class="font-body-md text-body-md">booking@mchoanganh.com</span></div><div class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-sky-800 text-[20px]">location_on</span><span class="font-body-sm text-body-sm">Hà Nội &amp; TP. Hồ Chí Minh (Nhận show toàn cầu)</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-4 text-on-surface-variant"><p class="font-body-sm text-body-sm">© 2025 MC Hoàng Anh. Toàn bộ bản quyền được bảo lưu.</p><div class="flex items-center gap-6"><span class="font-label-caps text-label-caps text-slate-600">English &amp; Vietnamese Bilingual Host</span></div></div></div></footer></body></html>
